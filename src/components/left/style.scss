@@ -1,0 +1,41 @@
+.left {
+  position        : relative;
+  display         : flex;
+  justify-content : space-between;
+  background-image: url(bg.png);
+  background-color: #F0F2F5;
+
+  .corner {
+    position       : fixed;
+    height         : 52px;
+    top            : 24px;
+    left           : 24px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    z-index        : -100;
+  }
+
+  .header {
+    width          : 60%;
+    height         : 52px;
+    position       : absolute;
+    top            : 24px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    z-index        : 100;
+
+    .flex-left {
+      display        : flex;
+      justify-content: space-between;
+      align-items    : center;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom  : 0;
+    z-index : 100;
+  }
+}

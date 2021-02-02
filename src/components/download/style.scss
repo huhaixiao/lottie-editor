@@ -1,0 +1,30 @@
+$side-length: 210px;
+
+.lamp {
+  display  : none;
+  position : absolute;
+  width    : $side-length;
+  height   : $side-length;
+  transform: translate(-50%, -50%);
+
+  opacity   : .4;
+  background: radial-gradient(rgba(255, 255, 255, 0.4) 5%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.6) 35%, rgba(255, 255, 255, 0) 70%);
+
+  &.open {
+    animation: lamplight-open .5s;
+  }
+}
+
+@keyframes lamplight-open {
+  0% {
+    width  : $side-length;
+    height : $side-length;
+    opacity: .6;
+  }
+
+  100% {
+    width  : 1000px;
+    height : 1000px;
+    opacity: 0;
+  }
+}

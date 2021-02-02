@@ -1,0 +1,41 @@
+.controller {
+  box-shadow: 0px 8px 12px -4px rgba(0, 0, 0, 0.06);
+  .ant-slider-track {
+    background-color: rgb(24, 132, 255);
+  }
+  .ant-slider-track:hover {
+    height: 8px;
+    top:-2px;
+
+  }
+
+  .ant-slider-handle {
+    margin-top   : -15px;
+    height       : 34px;
+    border-radius: 6px;
+    border-width: 3px;
+    border-color : rgb(24, 132, 255);
+  }
+  .ant-slider-handle:hover{
+    background-color: rgb(24, 132, 255);
+    border: 3px solid #fff;
+    box-shadow: 0px 2px 8px rgba(41, 141, 255, 0.35);
+
+  }
+}
+
+.icon {
+  font-size: 50px;
+  cursor   : pointer;
+}
+
+.loop{
+margin-left: 12px;
+padding-top: 4px;
+cursor: pointer;
+}
+.direction {
+  cursor: pointer;
+  padding-top: 4px;
+  cursor: pointer;
+}

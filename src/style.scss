@@ -1,0 +1,224 @@
+// reset
+* {
+  user-select: none;
+}
+
+body {
+  margin : 0;
+  padding: 0;
+}
+
+ul {
+  list-style        : none;
+  margin            : 0;
+  margin-block      : 0;
+  margin-block-start: 0;
+  margin-block-end  : 0;
+}
+
+// placeholder-selector
+%_center_container {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+// app
+
+.stage {
+  .container {
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+  }
+}
+
+.container {
+  display : flex;
+  height  : 100vh;
+  overflow: hidden;
+
+
+  .left {
+    flex-grow      : 1;
+    align-items    : center;
+    justify-content: center;
+    flex-direction : column;
+
+    .clear {
+      @extend %_center_container;
+      width           : 64px;
+      height          : 52px;
+      background-color: #FFF;
+
+      border       : 2px solid #EEF4F8;
+      border-radius: 16px;
+      cursor       : pointer;
+      transition   : all 0.1s;
+    }
+
+    .clear:hover {
+      border: 2px solid #1884FF;
+      transform: scale(1.05);
+      box-shadow: 0px 8px 12px -4px rgba(41, 141, 255, 0.25);
+
+    }
+
+    .clear:active {
+      transform: scale(0.95);
+      box-shadow: 0px 0px 0px -4px rgba(41, 141, 255, 0.25);
+    }
+
+    .background-image {
+      @extend %_center_container;
+      margin-left     : 8px;
+      width           : 145px;
+      height          : 52px;
+      background-color: #FFF;
+      border          : 2px solid #EEF4F8;
+      border-radius   : 16px;
+      cursor          : pointer;
+      color           : #181818;
+      font-size       : 16px;
+      font-weight     : 700;
+      transition      : all 0.1s;
+
+    }
+
+    .background-image:hover {
+      border: 2px solid #1884FF;
+      transform: scale(1.05);
+      box-shadow: 0px 8px 12px -4px rgba(41, 141, 255, 0.25);
+    }
+
+    .background-image:active {
+      transform: scale(0.95);
+      box-shadow: 0px 0px 0px -4px rgba(41, 141, 255, 0.25);
+
+    }
+
+    .background-color {
+      height: 40px;
+    }
+  }
+
+  .right {
+    border          : 1px solid transparent;
+    padding         : 16px;
+    height          : 100vh;
+    background-color: #F0F2F5;
+    display         : flex;
+
+  
+    ::-webkit-scrollbar {display:none;}
+
+    &-container {
+      $margin-top     : 16px;
+      $half-margin-top: $margin-top / 2;
+      background-color: #fff;
+      padding         : 16px 16px 150px 16px;
+      width           : 340px;
+      display         : flex;
+      flex-direction  : column;
+      justify-content : space-between;
+      height          : 100%;
+      border          : 1px solid #EEF4F8;
+      border-radius   : 20px;
+      overflow        : auto;
+
+
+
+      .download {
+        min-height: 50px;
+      }
+    }
+
+    &-up {
+      display        : flex;
+      flex-direction : column;
+      justify-content: start;
+    }
+
+    .menu-image {
+      padding: 12px 0px;
+      background-color: #fff;
+      box-shadow: inset 0px 1px 0px #EEF4F8;
+      align-self: stretch;
+      &-name{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+
+    .image {
+      &-item {
+        margin         : 12px 0;
+        display        : flex;
+        padding-right: 5px;
+        justify-content: space-between;
+        align-items    : center;
+
+
+        .thumbnail {
+          @extend %_center_container;
+          width           : 72px;
+          height          : 50px;
+          background-color: #EEF4F8;
+          border-radius   : 16px;
+          border          : 2px solid #EEF4F8;
+
+          &-img {
+            max-width : 100%;
+            max-height: 100%;
+          }
+        }
+
+        .replace {
+          @extend %_center_container;
+          width        : 80px;
+          height       : 50px;
+          border       : 2px solid #EEF4F8;
+          border-radius: 16px;
+          cursor       : pointer;
+          transition   : all 0.1s;
+        }
+
+        .replace:hover {
+          border: 2px solid #1884FF;
+          transform: scale(1.05);
+          box-shadow: 0px 8px 12px -4px rgba(41, 141, 255, 0.25);
+
+        }
+
+        .replace:active {
+          transform: scale(0.95);
+          box-shadow: 0px 0px 0px -4px rgba(41, 141, 255, 0.25);
+        }
+      }
+    }
+
+    .preview {
+      cursor: pointer;
+    }
+  }
+}
+
+
+.upload {
+  &:hover {
+    transform: scale(1.02);
+    border: 2px dashed #1884FF!important;
+  };
+}
+.header {
+  .background-color {
+
+    &-item {
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 12px -4px rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+}

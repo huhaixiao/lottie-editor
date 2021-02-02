@@ -1,0 +1,11 @@
+.right {
+  // position: absolute;
+  // top     : 0;
+  // right   : 0;
+
+  &-container {
+    padding-bottom: 150px;
+
+    position: relative;
+  }
+}
